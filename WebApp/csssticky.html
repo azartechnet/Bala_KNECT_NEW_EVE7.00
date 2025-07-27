@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Sticky Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+
+    .section {
+      height: 1200px;
+      padding: 20px;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0; /* Stick to the top */
+      background: #ff9800;
+      padding: 15px;
+      font-weight: bold;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="sticky-header">📌 I stick to the top when scrolling</div>
+    <p>Scroll down this section to see the sticky effect in action. The orange box will remain at the top of the screen while you scroll through the content in this section.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, quam at venenatis luctus, arcu justo tincidunt elit, a malesuada neque lorem a quam.</p>
+    <p>More content...</p>
+    <p>Even more content to scroll...</p>
+    <p>Keep scrolling...</p>
+    <p>Almost there...</p>
+    <p>The sticky header only sticks within this section.</p>
+  </div>
+
+</body>
+</html>

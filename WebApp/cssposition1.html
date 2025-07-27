@@ -1,0 +1,78 @@
+<style>
+    .demo-section
+    { 
+         margin-bottom: 40px;
+         padding:10px;
+         border:1px solid red;
+         background-color: aqua;
+         /* left: 100px; *//*Its not working*/
+    }
+    .static
+    {
+        position: static;
+        background-color: lightgray;
+        padding: 10px;
+    }
+    .relative
+    {
+        position: relative;
+        left:30px;
+        top:20px;
+        background-color: lightblue;
+        padding:10px;
+    }
+    .absolute-container
+    {
+        position: relative;
+        height: 80px;
+        background-color: aqua;
+        margin-bottom: 10px;
+    }
+    .absolute
+    {
+        position: absolute;
+        right: 5px;
+        top:25px;
+        background-color:brown;
+        padding:10px;
+    }
+   .fixed
+   {
+     position: fixed;
+     bottom: 15px;
+     right: 15px;
+     background-color: yellow;
+     padding:10px;
+     z-index:10;
+   }
+
+</style>
+
+
+
+<div class="demo-section" style="height: 100px;">
+   <div class="static">
+        Static Positions
+   </div>
+ 
+</div>
+<div class="demo-section">
+  <div class="relative"> 
+         Relative
+   </div>
+  
+</div>
+<div class="demo-section">
+ <div class="absolute-container">
+       Absolute-Container
+       <div class="absolute">
+          Absolute
+       </div>
+   </div>
+  
+</div>
+<div class="demo-section">
+   <div class="fixed">
+       Fixed
+   </div>
+</div>
