@@ -1,0 +1,44 @@
+<!--
+  grid-column-start
+  grid-column-end
+  grid-row-start
+  grid-row-end
+  grid-column
+  grid-row
+-->
+  <style>
+   .grid-container
+   {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:10px;
+    background-color: blue;
+    padding: 10px;
+   }
+   .grid-container>div
+   {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+   }
+   /* .item1
+   {
+    grid-column-start: 1;
+    grid-column-end: 4;
+   } */
+    .item1
+    {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+  </style>
+  <div class="grid-container">
+      <div class="item1">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+  </div>
