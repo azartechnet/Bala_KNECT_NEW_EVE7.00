@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- using id selector create alter message -->
+<script>
+    $(document).ready(function(){
+        $("#p1").mouseenter(function(){
+           alert("Check Here");
+           $("#d1").text("This is Altered Div 1.");
+        })
+    })
+</script>
+
+<div id="d1">This is Div 1.</div>
+<p id="p1">Hover over this paragraph to alter the div above.</p>
