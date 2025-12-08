@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        })
+    })
+</script>
+<button>Click to Fade In boxes</button>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;margin:10px;"></div>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;margin:10px;"></div>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;margin:10px;"></div>

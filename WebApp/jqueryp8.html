@@ -1,0 +1,16 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--fadetoggle-->
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(3000);
+        })
+    })
+</script>
+<button>Click to Fade Toggle boxes</button>
+<div id="div1" style="width:80px;height:80px;background-color:red;margin:10px;"></div>
+<div id="div2" style="width:80px;height:80px;background-color:green;margin:10px;"></div>
+<div id="div3" style="width:80px;height:80px;background-color:blue;margin:10px;"></div>
