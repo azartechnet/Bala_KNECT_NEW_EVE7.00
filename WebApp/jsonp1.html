@@ -1,0 +1,15 @@
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const text='{"name":"John", "age":30, "city":"New York"}';
+        const obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age + ", " + obj.city;
+        document.getElementById("demo").style.color = "blue";
+        document.getElementById("demo2").innerHTML += "<br>Type of obj: " + typeof obj;
+       
+        document.getElementById("demo2").innerHTML=Object.values(obj)[1];
+
+    </script>
+</body>
