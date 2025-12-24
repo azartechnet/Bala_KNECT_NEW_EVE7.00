@@ -16,7 +16,7 @@ r1.render(<App/>)*/
 
 //Dynamic Rendering
 
-const Sample=()=>{
+/*const Sample=()=>{
   const name="azar";
   const age=20;
   return(
@@ -28,4 +28,73 @@ const Sample=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample/>)
+r1.render(<Sample/>)*/
+
+//React without JSX
+/*const myelem1=React.createElement("h1",null,"welcome")
+const myelem2=React.createElement("p",null,"This is paragraph")
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(React.createElement("div",null,myelem1,myelem2))*/
+
+//Login Form
+
+/*const Login=()=>{
+  return(
+    <>
+     <form>
+      <label>UserName</label>
+      <input type="text"/>
+      <label>Password</label>
+      <input type="password"/>
+      <input type="submit" value="Login"/>
+     </form>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Login/>)*/
+
+//React List
+/*const MyElem=()=>{
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+      </ul>
+      <ol>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+      </ol>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyElem/>)*/
+
+//Conditional Rendering
+
+const x=20
+let text=""
+if(x>10)
+{
+  text="x is greater than 10"
+}
+else
+{
+  text="x is less than 10"
+}
+const MyElem=()=>{
+  return(
+    <div>
+      <h1>{text}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyElem/>)
+
+//Nested if else,else if ladder,switch statement
