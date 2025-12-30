@@ -182,7 +182,7 @@ r1.render(<Sample name="azar" age="25"/>)*/
 
 //component in component
 
-function Component1()
+/*function Component1()
 {
   return(
     <div>
@@ -199,4 +199,108 @@ function Component2()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Component1/>)
+r1.render(<Component1/>)*/
+
+//Constructor using Super
+
+/*class Sample extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"azar",age:25}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Hello{this.state.name}{this.state.age}</h1>
+        <p>Welcome</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//constructor using props
+
+/*class Sample extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={name:props.name,age:props.age}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Welcome{this.props.name}{this.props.age}</h1>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Another
+
+/*class Counter extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={count:0}
+  }
+  increment=()=>{
+    this.setState({count:this.state.count+1})
+  }
+  decrement=()=>{
+    this.setState({count:this.state.count-1})
+  }
+  render()
+  {
+    return(
+      <div>
+        <h2>{this.state.count}</h2>
+        <button onClick={this.increment}>increment</button>
+        <button onClick={this.decrement}>decrement</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//React Events
+
+/*function Football()
+{
+  const shoot=()=>{
+    alert("Goal")
+  }
+  return(
+    <>
+      <button onClick={shoot}>Shoot</button>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//React Arguments passing
+
+function Football()
+{
+  const shoot=(year)=>{
+    alert(`Goal in ${year}`)
+  }
+  return(
+    <>
+       <button onClick={()=>shoot(2002)}>Shoot</button>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)
