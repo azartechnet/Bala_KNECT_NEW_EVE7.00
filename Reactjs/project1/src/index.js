@@ -326,7 +326,7 @@ function Football(props)
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-// r1.render(<Football isGoal={false}/>)
+// r1.render(<Football isGoal={true}/>)
 r1.render(<Football isGoal={Math.random()>0.5}/>)*/
 
 //React List using Map
