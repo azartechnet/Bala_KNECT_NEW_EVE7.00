@@ -352,7 +352,7 @@ r1.render(<Garage/>)*/
 
 //React using Keys
 
-function Car(props)
+/*function Car(props)
 {
   return<li>{props.id}{props.name}</li>
 }
@@ -374,4 +374,63 @@ function Garage()
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Garage/>)
+r1.render(<Garage/>)*/
+
+//destructuring props
+
+/*function Car({id,name})
+{
+  return<li>{id}{name}</li>
+}
+function Garage()
+{
+   const cars=[
+    {id:1,name:"BMW"},
+    {id:2,name:"Audi"},
+    {id:3,name:"Toyota"}
+    ]
+    return(
+    <div>
+      <h1>Garage</h1>
+      <ul>
+        {cars.map((car)=><Car key={car.id} id={car.id} name={car.name}/>)}
+      </ul>
+    </div>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)*/
+
+//Destructuring state
+
+class Car extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { id: props.id, name: props.name };
+  }
+  render() {
+    const { id, name } = this.state;
+    return <li>{id} {name}</li>;
+  }
+}
+function Garage() {
+  const cars = [
+    { id: 1, name: "BMW" },
+    { id: 2, name: "Audi" },
+    { id: 3, name: "Toyota" }
+  ];
+  return (
+    <div>
+      <h1>Garage</h1>
+      <ul>
+        {cars.map((car) => (
+          <Car key={car.id} id={car.id} name={car.name} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<Garage />);
