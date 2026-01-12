@@ -404,7 +404,7 @@ r1.render(<Garage/>)*/
 
 //Destructuring state
 
-class Car extends React.Component {
+/*class Car extends React.Component {
   constructor(props) {
     super(props);
     this.state = { id: props.id, name: props.name };
@@ -433,4 +433,26 @@ function Garage() {
 }
 
 const r1 = ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<Garage />);
+r1.render(<Garage />);*/
+
+//Destructuring in arrays
+
+function Skills()
+{
+  const skills=["HTML","CSS","JS","React"]
+  const [skill1,skill2,skill3,skill4]=skills;
+  return(
+    <div>
+      <h1>My Skills</h1>
+      <ul>
+        <li>{skill1}</li>
+        <li>{skill2}</li>
+        <li>{skill3}</li>
+        <li>{skill4}</li>
+      </ul>
+    </div>
+  )
+
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Skills/>)
