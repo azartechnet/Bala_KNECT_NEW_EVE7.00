@@ -437,7 +437,7 @@ r1.render(<Garage />);*/
 
 //Destructuring in arrays
 
-function Skills()
+/*function Skills()
 {
   const skills=["HTML","CSS","JS","React"]
   const [skill1,skill2,skill3,skill4]=skills;
@@ -455,4 +455,70 @@ function Skills()
 
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Skills/>)
+r1.render(<Skills/>)*/
+
+//class component Mounting Lifecycle method
+/*class MyComponent extends React.Component {
+  constructor(props)
+  {
+    super(props);
+    console.log("Constructor called")
+  }
+  componentDidMount()
+  {
+    console.log("Component Did Mount called")
+  }
+  render() {
+    console.log("Render method called")
+    return <h1>Welcome to React Lifecycle Methods</h1>;
+  }
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<MyComponent />);*/
+
+//class component Updating Lifecycle method
+
+/*class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+    console.log("Constructor called");
+  }
+  
+  componentDidMount() {
+    console.log("Component Did Mount called");
+  }
+  componentDidUpdate() {
+    console.log("Component Did Update called");
+  }
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
+  render() {
+    console.log("Render method called");
+    return (
+      <div>
+        <h1>Count: {this.state.count}</h1>
+        <button onClick={this.increment}>Increment</button>
+      </div>
+    );
+  }
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<MyComponent />);*/
+
+//class component Unmounting Lifecycle method
+
+class Child extends React.Component {
+
+  componentWillUnmount(){
+    console.log("Child Component is unmounting")
+  }
+  render() {
+    return <h1>This is Child Component</h1>;
+  }
+}
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<Child />);
