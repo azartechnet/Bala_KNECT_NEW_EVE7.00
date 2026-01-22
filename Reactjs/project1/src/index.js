@@ -601,4 +601,119 @@ r1.render(<Welcome/>);*/
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Time/>)*/
 
+//Another program for without useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("azar");
+  return(
+    <div>
+      <h1>Component1</h1>
+      <Component2 user={user}/>
+    </div>
+  )
+}
+function Component2(props)
+{
+  return(
+    <div>
+      <h2>Component2</h2>
+      <Component3 user={props.user}/>
+    </div>
+  )
+}
+function Component3(props)
+{
+  return(
+    <div>
+      <h3>Component3</h3>
+      <h4>User:{props.user}</h4>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
 //Another program for useContext
+
+/*const UserContext=React.createContext();
+function Component1()
+{
+  const [user,setUser]=useState("azar");
+  return(
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>Component1</h1>
+        <Component2/>
+      </div>
+    </UserContext.Provider>
+  )
+}
+function Component2()
+{
+  return(
+    <div>
+      <h2>Component2</h2>
+      <Component3/>
+    </div>
+  )
+}
+function Component3()
+{
+  const user=React.useContext(UserContext);
+  return(
+    <div>
+      <h3>Component3</h3>
+      <h4>User:{user}</h4>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//Another program for useRef
+
+/*function FocusInput()
+{
+  const inputRef=React.useRef(null);
+  const handleClick=()=>{
+    inputRef.current.focus();
+  }
+  return(
+    <div>
+      <input type="text" ref={inputRef}/>
+      <button onClick={handleClick}>Focus Input</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<FocusInput/>)*/
+
+//Todolist
+function TodoList()
+{
+  const [task,setTask]=useState("");
+  const [tasks,setTasks]=useState([]);
+  const handleChange=(e)=>{
+    setTask(e.target.value);
+  }
+  const handleAdd=()=>{
+    if(task!=="")
+    {
+      setTasks([...tasks,task]);
+      setTask("");
+    }
+  }
+  return(
+    <div>
+      <h1>Todo List</h1>
+      <input type="text" value={task} onChange={handleChange}/>
+      <button onClick={handleAdd}>Add Task</button>
+      <ul>
+        {tasks.map((t,index)=><li>{index}{t}</li>)}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<TodoList/>)
