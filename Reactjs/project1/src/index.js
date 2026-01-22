@@ -511,7 +511,7 @@ r1.render(<MyComponent />);*/
 
 //class component Unmounting Lifecycle method
 
-class Child extends React.Component {
+/*class Child extends React.Component {
 
   componentWillUnmount(){
     console.log("Child Component is unmounting")
@@ -521,4 +521,84 @@ class Child extends React.Component {
   }
 }
 const r1 = ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<Child />);
+r1.render(<Child />);*/
+
+//React Hooks
+
+import { useState,useEffect } from "react";
+
+/*function Counter()
+{
+  const [count,setCount]=useState(0);
+  const [name,setName]=useState("azar");
+  return(
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+      <h2>Name:{name}</h2>
+      <button onClick={()=>setName("ReactJS")}>Change Name</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//useEffect Hook
+
+/*function Counter()
+{
+  const [count,setCount]=useState(0);
+  useEffect(()=>{
+    document.title=`Count is ${count}`
+  },[count])
+  return(
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//Another program for useState
+/*function Welcome()
+{
+  const [name,setName]=useState("azar");
+  return(
+    <div>
+      <h2>Welcome,{name}</h2>
+      <input type="text" onChange={(e)=>setName(e.target.value)}/>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome/>);*/
+
+//Another program for useEffect
+
+/*function Time()
+{
+  const [ctime,setCtime]=useState(new Date().toLocaleTimeString());
+  const UpdateTime=()=>{
+    setCtime(new Date().toLocaleTimeString())
+  }
+  useEffect(()=>{
+    const timer=setInterval(UpdateTime,1000);
+    return()=>{
+      clearInterval(timer)
+    }
+  },[])
+  return(
+    <div>
+      <h1>{ctime}</h1>
+
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Time/>)*/
+
+//Another program for useContext
