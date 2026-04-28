@@ -1,11 +1,11 @@
 const exp=require('express');
 const app=exp();
-app.use(exp.json())
+app.use(exp.json());
 app.post("/",(req,res)=>{
     const {name,age}=req.body;
-    console.log(name,age);
-    res.send("data received");
+    res.send(`Hello ${name}, you are ${age} years old`);
 });
 app.listen(3000,()=>{
-    console.log("server started at port 3000");
-})
+    console.log("Server is running on port 3000");
+}
+);
